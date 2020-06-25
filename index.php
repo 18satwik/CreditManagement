@@ -39,7 +39,6 @@ and open the template in the editor.
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-              <li><a href="transfer.php"><span class="glyphicon glyphicon-share-alt"></span>Transfer</a></li>
           </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -59,10 +58,10 @@ and open the template in the editor.
         while ($row=  mysqli_fetch_array($result)){
             echo '<tr>';
             echo '<td>'.$i.'</td>';
-            echo '<td>'.'<a href=transfer.php?name=</a>'.$row['name'].'</td>';
-            echo '<td>'.$row['email'].'</td>';
-            echo '<td>'.$row['credit'].'</td>';
-            echo '<td><a href=transfer.php?name=' . $row['name'] . '><span class="glyphicon glyphicon-plus"></span></a><td>';
+            echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
+            echo "<td>" . $row["credit"] . "</td>";
+            echo '<td><a href=transfer.php?name='.$row['name'].'><span class="glyphicon glyphicon-plus"></span></a><td>';
             echo '</tr>';
             ++$i;
         }
